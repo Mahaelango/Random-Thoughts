@@ -26,7 +26,7 @@ const RegisterScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "/auth/register",
+        "/api/auth/register",
         {
           username,
           email,

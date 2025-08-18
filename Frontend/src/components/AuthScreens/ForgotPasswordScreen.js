@@ -11,7 +11,7 @@ const ForgotPasswordScreen = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "/auth/forgotpassword",
+        "/api/auth/forgotpassword",
         { email }
       );
       setSuccess(data.message);
