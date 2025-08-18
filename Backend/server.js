@@ -10,14 +10,19 @@ dotenv.config({
 })
 connectDatabase()
 const app = express() ;
+
+app.use(express.static(path.join(__dirname , "public") ))
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: "https://random-thought-frontend.onrender.com", // your frontend deploy link
+  credentials: true
+}));
+
 app.use("/",IndexRoute)
 app.use(customErrorHandler)
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
-app.use(express.static(path.join(__dirname , "public") ))
 const server = app.listen(PORT,()=>{
     console.log(`Server running on port  ${PORT} : ${process.env.NODE_ENV}`)
 })
