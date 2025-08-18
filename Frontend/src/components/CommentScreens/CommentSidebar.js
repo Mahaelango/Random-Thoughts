@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import StoryComments from './StoryComments';
-import axios from 'axios';
+import axios from "../../axios";
+// adjust path based on folder
+
 import AddComment from './AddComment';
 
 const CommentSidebar = ({ slug, sidebarShowStatus, setSidebarShowStatus, activeUser }) => {

@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react'
-import axios from 'axios';
+import axios from "../../axios";
+ // adjust path based on folder
+
 import StarRating from './StarRating';
 import { BsShieldCheck, BsCheckAll } from 'react-icons/bs'
 import { IoAdd } from 'react-icons/io5'

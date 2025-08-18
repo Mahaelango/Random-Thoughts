@@ -1,6 +1,7 @@
 import React, { useRef, useContext } from 'react'
 import { useState } from 'react'
-import axios from 'axios'
+import axios from "../../axios";
+  // adjust path as needed
 import { Link } from 'react-router-dom'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';

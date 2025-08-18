@@ -1,4 +1,6 @@
-import axios from 'axios';
+import axios from "../../axios";
+// adjust path based on folder
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import "../../Css/DetailStory.css"
