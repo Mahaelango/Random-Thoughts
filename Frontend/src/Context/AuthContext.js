@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
  // adjust path based on folder
-
-
 export const AuthContext = React.createContext();
 
 const AuthContextProvider = props => {

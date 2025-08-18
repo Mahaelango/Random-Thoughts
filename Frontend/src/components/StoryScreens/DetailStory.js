@@ -1,6 +1,4 @@
 import axios from "../../axios";
-// adjust path based on folder
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import "../../Css/DetailStory.css"
@@ -64,7 +62,6 @@ const DetailStory = () => {
             setStoryReadListStatus(true)
 
           }
-
         }
 
       }
@@ -77,9 +74,7 @@ const DetailStory = () => {
     getDetailStory();
 
   }, [slug, setLoading])
-
-
-
+  
   const handleLike = async () => {
     setTimeout(() => {
       setLikeStatus(!likeStatus)
@@ -131,8 +126,7 @@ const DetailStory = () => {
 
   const editDate = (createdAt) => {
 
-    const d = new Date(createdAt)
-      ;
+    const d = new Date(createdAt);
     var datestring = d.toLocaleString('eng', { month: 'long' }).substring(0, 3) + " " + d.getDate()
     return datestring
   }
@@ -147,16 +141,13 @@ const DetailStory = () => {
           authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
       })
-
       setStoryReadListStatus(data.status)
-
       document.getElementById("readListLength").textContent = data.user.readListLength
     }
     catch (error) {
       console.log(error)
     }
   }
-
   return (
     <>
       {
@@ -224,7 +215,6 @@ const DetailStory = () => {
                 </div>
 
               </div>
-
               <div className="CommentFieldEmp">
 
                 <CommentSidebar slug={slug} sidebarShowStatus={sidebarShowStatus} setSidebarShowStatus={setSidebarShowStatus}

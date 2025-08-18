@@ -11,7 +11,6 @@ const Story = ({ story }) => {
         var datestring = d.getDate() + " " +monthNames[d.getMonth()] + " ," + d.getFullYear() 
         return datestring
     }
-
     const truncateContent = (content) => {
         const trimmedString = content.substr(0, 73);
         return trimmedString

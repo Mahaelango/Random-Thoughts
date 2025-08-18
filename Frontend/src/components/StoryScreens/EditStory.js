@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef, useContext } from 'react';
 import axios from "../../axios";
-  // adjust path based on folder
-
 import Loader from '../GeneralScreens/Loader';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
@@ -69,9 +67,6 @@ const EditStory = () => {
             setError(error.response.data.error)
         }
     }
-
-
-
     return (
         <>
             {
@@ -106,7 +101,7 @@ const EditStory = () => {
 
                             />
 
-                            <div class="currentlyImage">
+                            <div className="currentlyImage">
                                 <div class="absolute">
                                     Currently Image
                                 </div>
